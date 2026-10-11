@@ -2,13 +2,11 @@
 let userScore = 0;
 let compScore = 0;
 
-
 // accessing the elements
 const choices = document.querySelectorAll(".choice");
 const msg = document.querySelector("#msg");
 const userScoreMsg = document.querySelector("#user-score");
 const compScoreMsg = document.querySelector("#comp-score");
-
 
 // function if the game draws 
 const drawGame = () =>{
@@ -16,7 +14,7 @@ const drawGame = () =>{
     msg.style.backgroundColor="#081b31";
 }
 
- 
+
 // function if any of the one wins
 const showWinner = (userWin) =>{
     if(userWin === true){
@@ -32,7 +30,6 @@ const showWinner = (userWin) =>{
     }
 }
 
-
 // function to generate eh computer choice
 const genCompChoice = () => {
     const options = ["rock","paper","scissors"];
@@ -40,7 +37,6 @@ const genCompChoice = () => {
     // in order to generate a number in a range you can multiply the math.random unction to a number so range would become (0,number-1);
     return options[index];
 }
-
 
 // function to start playing the game
 const playGame = (userChoice) => {
@@ -60,7 +56,6 @@ const playGame = (userChoice) => {
         showWinner(userWin);
     }
 }
-
 
 // function to chck the user's choice
 choices.forEach((choice)=>{
